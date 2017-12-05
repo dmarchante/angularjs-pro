@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Angular App</title>
+    </head>
+    <body>
+		<div class="counter" ng-controller="CounterController as counter">
+			<h3>Counter: {{ counter.count }}</h3>
+            <a class="counter__increment" href="" ng-click="counter.increment();">Increment Counter</a> -
+            <a class="counter__decrement" href="" ng-click="counter.decrement()"> Decrement Counter</a>
+            <ul>
+                <li ng-repeat="list in counter.countList">
+                    <input type="text" ng-model="list.id">
+                </li>
+            </ul>
+        </div>
+        
+
+        <!-- Angular -->
+        <script src="js/libs/angular.js"></script>
+
+        <!-- Angular Module -->
+        <script src="js/app.js"></script>
+
+        <!-- Angular Controllers -->
+        <script src="js/controllers/CounterController.js"></script>
+    </body>
+    
+</html>
